@@ -4,13 +4,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/product")
+@RequestMapping("/api/products")
 public class ProductController {
 
-    // get product
-    // create product
-    // get product by id
-    // update product
-    // delete product
+    // get products
 
+    // create product
+
+    // update product
+
+    // get product by id
+
+    // delete product
 }

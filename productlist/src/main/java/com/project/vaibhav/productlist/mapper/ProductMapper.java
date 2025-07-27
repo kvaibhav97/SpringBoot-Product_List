@@ -6,24 +6,25 @@ import com.project.vaibhav.productlist.entity.Product;
 
 public class ProductMapper {
 
-    // convert entity to DTO
-    public static ProductDTO toProductDTO(Product product){
-        return new ProductDTO(
-                product.getId(),
-                product.getName(),
-                product.getDescription(),
-                product.getPrice(),
-                product.getCategory().getId()
-        );
-    }
-
-    // convert DTO to entity
+    // Convert ProductDTO to ProductEntity
     public static Product toProductEntity(ProductDTO productDTO, Category category){
         Product product = new Product();
         product.setName(productDTO.getName());
-        product.setPrice(productDTO.getPrice());
         product.setDescription(productDTO.getDescription());
+        product.setPrice(productDTO.getPrice());
         product.setCategory(category);
         return product;
     }
+
+    // Convert ProductEntity to ProductDTO
+    public static ProductDTO toProductDTO(Product product){
+        ProductDTO productDTO = new ProductDTO();
+        productDTO.setId(product.getId());
+        productDTO.setName(product.getName());
+        productDTO.setDescription(product.getDescription());
+        productDTO.setPrice(product.getPrice());
+        productDTO.setCategoryId(product.getCategory().getId());
+        return productDTO;
+    }
+
 }

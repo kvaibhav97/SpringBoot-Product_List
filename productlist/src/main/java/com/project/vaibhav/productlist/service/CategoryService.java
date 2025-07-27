@@ -19,8 +19,9 @@ public class CategoryService {
         return CategoryMapper.toCategoryDTO(category);
     }
 
-    // get all category
-    // get category by id
-    // delete category
+    // get all categories
 
+    // get category by id
+
+    // delete category
 }

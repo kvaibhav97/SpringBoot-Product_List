@@ -3,6 +3,7 @@ package com.project.vaibhav.productlist.controller;
 import com.project.vaibhav.productlist.dto.CategoryDTO;
 import com.project.vaibhav.productlist.service.CategoryService;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,13 +17,16 @@ import org.springframework.web.bind.annotation.RestController;
 public class CategoryController {
 
     private CategoryService categoryService;
-    // get all category
+
+    // get all categories
+
+    // get category by id
+
     // create category
     @PostMapping
     public ResponseEntity<CategoryDTO> createCategory(@RequestBody CategoryDTO categoryDTO){
         return new ResponseEntity<>(categoryService.createCategory(categoryDTO), HttpStatus.CREATED);
     }
-    // get category by id
-    // delete category
 
+    // delete category
 }
